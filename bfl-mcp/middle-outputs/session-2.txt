@@ -1,0 +1,54 @@
+🎨 **Image Generation Started!**
+
+✅ Task submitted successfully
+
+📋 **Generation Details:**
+• Task ID: `8d4870ac-a549-4536-92c1-dc519876e977`
+• Model: FLUX.1 [dev]
+• Prompt: "A girl reading a letter in a cafe, soft light, vibrant colors, in the style of Vincent van Gogh, bold brushstrokes."
+• Dimensions: 1024×768
+• Format: PNG
+• Steps: 32
+• Seed: 999
+• Prompt Upsampling: Disabled
+• Safety Tolerance: 2
+
+⏳ **Next Steps:**
+1. Use the **get_result** tool with polling URL `https://api.eu2.bfl.ai/v1/get_result?id=8d4870ac-a549-4536-92c1-dc519876e977` to check progress
+2. When complete, get_result will return an image URL
+3. Use the **save_image** tool with the image URL from get_result to download the image
+4. Generation typically takes 10-60 seconds
+
+🔗 **Polling URL:** https://api.eu2.bfl.ai/v1/get_result?id=8d4870ac-a549-4536-92c1-dc519876e977
+
+💡 **Tip:** Keep the polling URL handy - you'll need it for get_result, which will then give you the image URL!
+
+
+check:
+========
+✅ **Generation Complete!**
+
+📋 **Task Information:**
+• Task ID: 8d4870ac-a549-4536-92c1-dc519876e977
+• Status: Ready
+
+📦 **Result Available:**
+• Image URL ready: https://delivery-eu4.bfl.ai/results/50/0529013057b6a5/3057b6a5e1544a099a87e8649509ac73/sample.png?se=2025-10-27T10%3A07%3A33Z&sp=r&sv=2024-11-04&sr=b&rsct=image/png&sig=vECF0%2B579SML53VNKU/RkGSW9mOafj4AzZP80Jz4Xxs%3D
+
+💡 **Next Step:** Use the save_image tool with this image URL to download the image
+
+
+save_image:
+===========
+💾 **Image Saved Successfully!**
+
+✅ Image downloaded from: https://delivery-eu4.bfl.ai/results/50/0529013057b6a5/3057b6a5e1544a099a87e8649509ac73/sample.png?se=2025-10-27T10%3A07%3A33Z&sp=r&sv=2024-11-04&sr=b&rsct=image/png&sig=vECF0%2B579SML53VNKU/RkGSW9mOafj4AzZP80Jz4Xxs%3D
+✅ Image saved to: `models/girl.png`
+
+📋 **File Information:**
+• Filename: girl.png
+• Format: PNG
+• File Size: 1621.1 KB
+• Task ID: 0529013057b6a5
+
+📂 Download Path: ./models
