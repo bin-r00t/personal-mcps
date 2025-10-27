@@ -1,0 +1,52 @@
+A cyberpunk street on a rainy night, neon signs reflecting on the wet pavement, a figure in a trench coat stands under an awning, flying cars in the background, cinematic, wide angle shot.ƒ
+
+
+
+🎨 **Image Generation Started!**
+
+✅ Task submitted successfully
+
+📋 **Generation Details:**
+• Task ID: `9125b1f8-596b-4f30-80a7-a7026e457f7e`
+• Model: FLUX.1 [dev]
+• Prompt: "A cyberpunk street on a rainy night, neon signs reflecting on the wet pavement, a figure in a trench coat stands under an awning, flying cars in the background, cinematic, wide angle shot."
+• Dimensions: 1024×768
+• Format: JPEG
+• Prompt Upsampling: Disabled
+• Safety Tolerance: 2
+
+⏳ **Next Steps:**
+1. Use the **get_result** tool with task ID `9125b1f8-596b-4f30-80a7-a7026e457f7e` to check progress
+2. Generation typically takes 10-60 seconds
+3. Result will include the generated image data
+
+🔗 **Polling URL:** https://api.us1.bfl.ai/v1/get_result?id=9125b1f8-596b-4f30-80a7-a7026e457f7e
+
+💡 **Tip:** Keep the task ID handy - you'll need it to retrieve your generated image!
+
+
+
+
+
+🎨 **Image Generation Started!**
+
+✅ Task submitted successfully
+
+📋 **Generation Details:**
+• Task ID: `eb465b14-61aa-472c-9dc8-98aa4884f055`
+• Model: FLUX.1 [dev]
+• Prompt: "A glass vase on a wooden table, with a single sunflower inside, casting a soft shadow on the floor."
+• Dimensions: 1024×768
+• Format: JPEG
+• Steps: 32
+• Prompt Upsampling: Disabled
+• Safety Tolerance: 2
+
+⏳ **Next Steps:**
+1. Use the **get_result** tool with polling URL `https://api.us1.bfl.ai/v1/get_result?id=eb465b14-61aa-472c-9dc8-98aa4884f055` to check progress
+2. Generation typically takes 10-60 seconds
+3. Result will include the generated image data
+
+🔗 **Polling URL:** https://api.us1.bfl.ai/v1/get_result?id=eb465b14-61aa-472c-9dc8-98aa4884f055
+
+💡 **Tip:** Keep the polling URL handy - you'll need it to retrieve your generated image!
