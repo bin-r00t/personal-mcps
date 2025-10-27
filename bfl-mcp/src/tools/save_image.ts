@@ -1,0 +1,1 @@
+// save the generated image to the specified download path with a proper filename

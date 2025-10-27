@@ -1,0 +1,43 @@
+{
+  "urls": [
+    {
+      "url": "https://api.bfl.ai",
+      "type": "primary",
+      "description": "Routes requests across all available clusters globally",
+      "warn": "Always use the 'polling_url' returned in responses when using this endpoint"
+    },
+    {
+      "url": "https://api.eu.bfl.ai",
+      "type": "regional",
+      "description": "Multi-cluster routing limited to EU regions",
+      "warn": "Does not support finetuning and finetuned inference"
+    },
+    {
+      "url": "https://api.us.bfl.ai",
+      "type": "regional",
+      "description": "Multi-cluster routing limited to US regions",
+      "warn": "Does not support finetuning and finetuned inference"
+    },
+    {
+      "url": "https://api.eu1.bfl.ai",
+      "type": "legacy-regional",
+      "description": "Single cluster, no automatic failover",
+      "warn": "Required for finetuning and finetuned inference operations in EU region"
+    },
+    {
+      "url": "https://api.us1.bfl.ai",
+      "type": "legacy-regional",
+      "description": "Single cluster, no automatic failover",
+      "warn": "Required for finetuning and finetuned inference operations in US region"
+    }
+  ],
+  "model-endpoints": [
+    "/flux-kontext-pro",
+    "/flux-kontext-max",
+    "/flux-pro-1.1-ultra",
+    "/flux-pro-1.1",
+    "/flux-pro",
+    "/flux-dev"
+  ],
+  "description": "Our API endpoints enable media creation with BFL models. It follows an asynchronous design, where you first make a request for a generation and then query for the result of your request."
+}

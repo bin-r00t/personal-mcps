@@ -1,0 +1,1 @@
+// after generate_image(), check the result from another endpoint

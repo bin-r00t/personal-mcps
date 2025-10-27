@@ -1,0 +1,1 @@
+// An endpoint for getting generation task result.

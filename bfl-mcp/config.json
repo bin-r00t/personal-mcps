@@ -1,0 +1,5 @@
+{
+  "BFL_API_KEY": "your_api_key_here",
+  "model": "flux-dev",
+  "download_path": "./models"
+}

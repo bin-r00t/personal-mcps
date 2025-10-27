@@ -1,0 +1,1 @@
+// provide 'model', 'prompt', 'width', 'height', etc. to generate an image
