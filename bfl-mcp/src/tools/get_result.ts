@@ -68,15 +68,19 @@ export function getResult(server: McpServer, config: BFLConfig) {
         if (result.result) {
           responseText += `\n📦 Result available!`;
 
-          // If the result contains an image, add info about it
+          // If the result contains an image URL
           if (typeof result.result === 'object' && result.result.sample) {
-            responseText += `\n- Image data included in result`;
-            responseText += `\n- Width: ${result.result.width || 'unknown'}`;
-            responseText += `\n- Height: ${result.result.height || 'unknown'}`;
-            responseText += `\n- Format: ${result.result.content_type || 'unknown'}`;
+            responseText += `\n- Image URL: ${result.result.sample}`;
+            if (result.result.width) responseText += `\n- Width: ${result.result.width}px`;
+            if (result.result.height) responseText += `\n- Height: ${result.result.height}px`;
+            if (result.result.content_type) responseText += `\n- Format: ${result.result.content_type}`;
+            responseText += `\n\n💡 **Next Step:** Copy the image URL above and use it with the save_image tool to download the image`;
+          } else {
+            responseText += `\n- Result data: ${JSON.stringify(result.result, null, 2)}`;
           }
         }
 
+        // Note: In real BFL API responses, these fields are typically null
         if (result.details && Object.keys(result.details).length > 0) {
           responseText += `\n\n📋 Details:\n${JSON.stringify(result.details, null, 2)}`;
         }

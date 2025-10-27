@@ -143,8 +143,9 @@ export function generateImageDev(server: McpServer, config: BFLConfig) {
 
         responseText += `⏳ **Next Steps:**\n`;
         responseText += `1. Use the **get_result** tool with polling URL \`${result.polling_url}\` to check progress\n`;
-        responseText += `2. Generation typically takes 10-60 seconds\n`;
-        responseText += `3. Result will include the generated image data\n\n`;
+        responseText += `2. When complete, get_result will return an image URL\n`;
+        responseText += `3. Use the **save_image** tool with the image URL from get_result to download the image\n`;
+        responseText += `4. Generation typically takes 10-60 seconds\n\n`;
 
         if (result.polling_url) {
           responseText += `🔗 **Polling URL:** ${result.polling_url}\n\n`;
@@ -154,7 +155,7 @@ export function generateImageDev(server: McpServer, config: BFLConfig) {
           responseText += `🔔 **Webhook configured:** You will receive a notification at ${args.webhook_url}\n\n`;
         }
 
-        responseText += `💡 **Tip:** Keep the polling URL handy - you'll need it to retrieve your generated image!`;
+        responseText += `💡 **Tip:** Keep the polling URL handy - you'll need it for get_result, which will then give you the image URL!`;
 
         return {
           content: [

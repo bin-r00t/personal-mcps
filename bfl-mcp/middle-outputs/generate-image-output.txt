@@ -26,7 +26,8 @@ A cyberpunk street on a rainy night, neon signs reflecting on the wet pavement, 
 
 
 
-
+generate_image:
+===============
 
 🎨 **Image Generation Started!**
 
@@ -50,3 +51,90 @@ A cyberpunk street on a rainy night, neon signs reflecting on the wet pavement, 
 🔗 **Polling URL:** https://api.us1.bfl.ai/v1/get_result?id=eb465b14-61aa-472c-9dc8-98aa4884f055
 
 💡 **Tip:** Keep the polling URL handy - you'll need it to retrieve your generated image!
+
+
+get_result:
+==========
+
+✅ Generation completed successfully
+
+Task ID: eb465b14-61aa-472c-9dc8-98aa4884f055
+Status: Ready
+Progress: 0%
+
+📦 Result available!
+- Image URL: https://delivery-us1.bfl.ai/results/66/752896df5724c7/df5724c7e63b4276922d788dd2fc74ae/sample.jpeg?se=2025-10-27T09%3A12%3A33Z&sp=r&sv=2024-11-04&sr=b&rsct=image/jpeg&sig=C5B1Z1u8VM0SNTX9SGUmrUrL2fNJBPF/JtOWKbw8nAo%3D
+
+💡 **Tip:** Use the save_image tool to download and save the image from this URL
+
+
+
+generate:
+==========
+🎨 **Image Generation Started!**
+
+✅ Task submitted successfully
+
+📋 **Generation Details:**
+• Task ID: `22bc1302-0e03-405b-ac5d-83c327c59dcb`
+• Model: FLUX.1 [dev]
+• Prompt: "A visual representation of "solitude": an astronaut floating in the vast emptiness of space, the distant Earth reflected on their visor, minimalistic."
+• Dimensions: 1024×768
+• Format: PNG
+• Steps: 32
+• Prompt Upsampling: Disabled
+• Safety Tolerance: 2
+
+⏳ **Next Steps:**
+1. Use the **get_result** tool with polling URL `https://api.us1.bfl.ai/v1/get_result?id=22bc1302-0e03-405b-ac5d-83c327c59dcb` to check progress
+2. When complete, get_result will return an image URL
+3. Use the **save_image** tool with the image URL from get_result to download the image
+4. Generation typically takes 10-60 seconds
+
+🔗 **Polling URL:** https://api.us1.bfl.ai/v1/get_result?id=22bc1302-0e03-405b-ac5d-83c327c59dcb
+
+💡 **Tip:** Keep the polling URL handy - you'll need it for get_result, which will then give you the image URL!
+
+
+check status:
+===========
+✅ **Generation Complete!**
+
+📋 **Task Information:**
+• Task ID: 22bc1302-0e03-405b-ac5d-83c327c59dcb
+• Status: Ready
+
+📦 **Result Available:**
+• Image URL ready: https://delivery-us1.bfl.ai/results/0a/67503159a87d39/59a87d39d576469ca024e2420a824e1b/sample.png?se=2025-10-27T09%3A44%3A35Z&sp=r&sv=2024-11-04&sr=b&rsct=image/png&sig=piesnwWiLVNzLHKwNfMw3M7lTNSrqDn5N%2BwHgK%2BLt2o%3D
+
+💡 **Next Step:** Use the save_image tool with this image URL to download the image
+
+
+get result:
+==========
+✅ Generation completed successfully
+
+Task ID: 22bc1302-0e03-405b-ac5d-83c327c59dcb
+Status: Ready
+Progress: 0%
+
+📦 Result available!
+- Image URL: https://delivery-us1.bfl.ai/results/0a/67503159a87d39/59a87d39d576469ca024e2420a824e1b/sample.png?se=2025-10-27T09%3A44%3A35Z&sp=r&sv=2024-11-04&sr=b&rsct=image/png&sig=piesnwWiLVNzLHKwNfMw3M7lTNSrqDn5N%2BwHgK%2BLt2o%3D
+
+💡 **Next Step:** Copy the image URL above and use it with the save_image tool to download the image
+
+
+file save:
+===========
+💾 **Image Saved Successfully!**
+
+✅ Image downloaded from:  https://delivery-us1.bfl.ai/results/0a/67503159a87d39/59a87d39d576469ca024e2420a824e1b/sample.png?se=2025-10-27T09%3A44%3A35Z&sp=r&sv=2024-11-04&sr=b&rsct=image/png&sig=piesnwWiLVNzLHKwNfMw3M7lTNSrqDn5N%2BwHgK%2BLt2o%3D
+✅ Image saved to: `models/bfl-sample.png_se_2025-10-27T09_3A44_3A35Z_sp_r_sv_2024-11-04_sr_b_rsct_image-2025-10-27T09-35-45-204Z.png&sig=piesnwWiLVNzLHKwNfMw3M7lTNSrqDn5N%2BwHgK%2BLt2o%3D`
+
+📋 **File Information:**
+• Filename: bfl-sample.png_se_2025-10-27T09_3A44_3A35Z_sp_r_sv_2024-11-04_sr_b_rsct_image-2025-10-27T09-35-45-204Z.png&sig=piesnwWiLVNzLHKwNfMw3M7lTNSrqDn5N%2BwHgK%2BLt2o%3D
+• Format: PNG&SIG=PIESNWWILVNZLHKWNFMW3M7LTNSRQDN5N%2BWHGK%2BLT2O%3D
+• File Size: 1044.4 KB
+• Task ID: sample.png?se=2025-10-27T09%3A44%3A35Z&sp=r&sv=2024-11-04&sr=b&rsct=image
+
+📂 Download Path: ./models

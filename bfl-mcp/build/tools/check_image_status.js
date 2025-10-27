@@ -57,23 +57,22 @@ export function checkImageStatus(server, config) {
             responseText += `📋 **Task Information:**\n`;
             responseText += `• Task ID: ${result.id}\n`;
             responseText += `• Status: ${result.status}\n`;
-            if (result.progress !== undefined) {
+            // Note: In real BFL API responses, progress is typically null
+            if (result.progress !== undefined && result.progress !== null) {
                 const progressPercent = Math.round(result.progress * 100);
                 responseText += `• Progress: ${progressPercent}%\n`;
-                // Add progress bar
-                const barLength = 20;
-                const filledLength = Math.round((progressPercent / 100) * barLength);
-                const bar = "█".repeat(filledLength) + "░".repeat(barLength - filledLength);
-                responseText += `• Progress: [${bar}] ${progressPercent}%\n`;
             }
             if (isComplete && result.result) {
                 responseText += `\n📦 **Result Available:**\n`;
                 if (typeof result.result === 'object' && result.result.sample) {
-                    responseText += `• Image data ready for download\n`;
-                    responseText += `• Width: ${result.result.width || 'unknown'}px\n`;
-                    responseText += `• Height: ${result.result.height || 'unknown'}px\n`;
-                    responseText += `• Format: ${result.result.content_type || 'unknown'}\n`;
-                    responseText += `\n💡 **Tip:** Use the save_image tool to download and save the image`;
+                    responseText += `• Image URL ready: ${result.result.sample}\n`;
+                    if (result.result.width)
+                        responseText += `• Width: ${result.result.width}px\n`;
+                    if (result.result.height)
+                        responseText += `• Height: ${result.result.height}px\n`;
+                    if (result.result.content_type)
+                        responseText += `• Format: ${result.result.content_type}\n`;
+                    responseText += `\n💡 **Next Step:** Use the save_image tool with this image URL to download the image`;
                 }
                 else {
                     responseText += `• Result data: ${JSON.stringify(result.result, null, 2)}`;
