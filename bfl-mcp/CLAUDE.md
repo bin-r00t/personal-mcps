@@ -4,25 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a repository containing Model Context Protocol (MCP) servers written in TypeScript. The repository contains two MCP server implementations:
-
-1. **weather-mcp** - A weather information server that provides access to US weather data
-2. **bfl-mcp** - A Black Forest Labs integration server for AI image generation
-
-Both servers are built using the `@modelcontextprotocol/sdk` and provide tools through the MCP protocol.
+This is the **bfl-mcp** project - a Black Forest Labs integration server for AI image generation using the Model Context Protocol (MCP). This server provides access to Black Forest Labs' FLUX models for image generation, editing, and fine-tuning capabilities.
 
 ## Architecture
 
-### weather-mcp Server
-- **Location**: `weather-mcp/`
-- **Purpose**: Provides weather alerts and forecasts for US locations
-- **API Integration**: Uses the National Weather Service (NWS) API
-- **Tools**:
-  - `get_alerts`: Get weather alerts for a US state
-  - `get_forecast`: Get weather forecast for coordinates
-
-### bfl-mcp Server
-- **Location**: `bfl-mcp/`
+### Server Details
 - **Purpose**: Black Forest Labs API integration for AI image generation
 - **API Integration**: Uses the BFL API (https://api.bfl.ai)
 - **Status**: Implementation in progress with comprehensive API documentation
@@ -31,40 +17,18 @@ Both servers are built using the `@modelcontextprotocol/sdk` and provide tools t
 
 ### Building
 ```bash
-# Build weather-mcp
-cd weather-mcp && npm run build
-
-# Build bfl-mcp
-cd bfl-mcp && npm run build
+# Build the project
+npm run build
 ```
 
 ### Installation
 ```bash
-# Install dependencies for weather-mcp
-cd weather-mcp && npm install
-
-# Install dependencies for bfl-mcp
-cd bfl-mcp && npm install
+# Install dependencies
+npm install
 ```
 
 ## Code Structure
 
-### weather-mcp Structure
-```
-weather-mcp/
-├── src/
-│   ├── index.ts              # Main server entry point
-│   ├── vars.ts               # Constants (API base URLs, user agent)
-│   ├── helpers.ts            # Utility functions and types
-│   └── tools/
-│       ├── get_alerts.ts     # Weather alerts tool implementation
-│       └── get_forecast.ts   # Weather forecast tool implementation
-├── build/                    # Compiled JavaScript output
-├── package.json
-└── tsconfig.json
-```
-
-### bfl-mcp Structure
 ```
 bfl-mcp/
 ├── src/
@@ -113,14 +77,8 @@ bfl-mcp/
 
 ## Development Notes
 
-### Weather API Integration
-- The weather-mcp server integrates with the US National Weather Service API
-- Only supports US locations (latitude/longitude coordinates)
-- Requires proper User-Agent header for API requests
-- API rate limiting and error handling implemented
-
 ### BFL API Integration
-- The bfl-mcp server integrates with Black Forest Labs API for image generation
+- The server integrates with Black Forest Labs API for image generation
 - Comprehensive API documentation available in `src/tools/instructions/`
 - Supports various FLUX models (FLUX 1.1 pro, FLUX 1 dev, FLUX fill pro, etc.)
 - Features include:
@@ -144,13 +102,10 @@ bfl-mcp/
 
 ## Testing
 
-To test the MCP servers after building:
+To test the MCP server after building:
 ```bash
-# Run weather server
-./weather-mcp/build/index.js
-
 # Run BFL server
-./bfl-mcp/build/index.js
+./build/index.js
 
 # Test with MCP client (Claude Desktop, etc.)
 # Add server configuration pointing to build/index.js
@@ -163,3 +118,19 @@ The BFL API documentation is stored in `src/tools/instructions/` and contains:
 - **Utilities**: Management endpoints for results, finetunes, credits, etc.
 
 Each endpoint includes complete OpenAPI specifications with request/response schemas, examples, and descriptions.
+
+### Available Models and Features
+- **FLUX 1.1 pro**: High-quality image generation with ultra mode
+- **FLUX 1 pro**: Standard professional image generation
+- **FLUX 1 dev**: Development model for experimentation
+- **FLUX fill pro**: Image inpainting and completion
+- **FLUX canny pro**: Control-based generation with edge detection
+- **FLUX depth pro**: Control-based generation with depth maps
+- **FLUX kontext pro/max**: Context-aware image editing
+- **Fine-tuning**: Custom model training with user data
+
+### API Endpoints Structure
+- All generation tasks are asynchronous and return task IDs
+- Use `/v1/get_result` to poll for completion
+- Webhook support for real-time notifications
+- Comprehensive error handling and status reporting
